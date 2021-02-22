@@ -20,6 +20,8 @@ docker-compose down
 
 [listener](listener) - connects to db and LISTENS to events published by trigger.
 
+ NOTIFY/LISTEN works as a "fanout to queues". Each event listener receives same message that was published.
+
 # Cons
 - If `listener` is down the events are lost. There is no queue in this functionality.
 - The triggers must be manually set onto table to NOTIFY the event.
