@@ -25,3 +25,4 @@ docker-compose down
 # Cons
 - If `listener` is down the events are lost. There is no queue in this functionality.
 - The triggers must be manually set onto table to NOTIFY the event.
+- Due to data duplication issue the `listener` app cannot be scaled as it is. There should be one listener per event name. 
