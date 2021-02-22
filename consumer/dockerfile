@@ -1,0 +1,7 @@
+FROM python:3
+WORKDIR /
+COPY listen.py .
+RUN python -m pip install \
+        pgnotify \
+        six
+CMD ["python", "-u", "listen.py"]
