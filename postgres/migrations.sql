@@ -22,6 +22,3 @@ AFTER INSERT
 ON public.order
 FOR EACH ROW
 EXECUTE PROCEDURE public.notify();
-
-INSERT INTO public.order(name, description, created_on)
-VALUES ('The name', 'Description it is!', '2004-10-19 10:23:54')
